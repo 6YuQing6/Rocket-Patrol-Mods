@@ -6,6 +6,7 @@ let config = { //object type
     render: {
       pixelArt: true
     },
+    autoCenter: true,
     scene: [Menu,Play]
   }
 
