@@ -11,6 +11,7 @@ class Menu extends Phaser.Scene {
         this.load.image('stars','./assets/starfield-stars.png');
         this.load.image('moon','./assets/starfield-moon.png');
         this.load.image('spaceship2','./assets/spaceship2.png');
+        this.load.image('particles','assets/particles.png');
 
         // load audio
         this.load.audio('sfx-select', './assets/sfx-select.wav')
@@ -33,6 +34,7 @@ class Menu extends Phaser.Scene {
             frames: this.anims.generateFrameNumbers('explosion', { start: 0, end: 9, first: 0}),
             frameRate: 30
         })
+        
         
         let menuConfig = {
             fontFamily: 'Courier',

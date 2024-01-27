@@ -123,6 +123,15 @@ class Play extends Phaser.Scene {
       // create explosion sprite at ship's position
       let boom = this.add.sprite(ship.x, ship.y, 'explosion').setOrigin(0, 0);
       boom.anims.play('explode')             // play explode animation
+        //particles explosion : https://labs.phaser.io/edit.html?src=src\game%20objects\particle%20emitter\explode%20emitter.js
+      const emitter = this.add.particles(ship.x,ship.y, 'particles', {
+        lifespan: 4000,
+        speed: {min: 250, max: 450},
+        scale: {start: 0.8, end: 0.0},
+        gravityY: 300,
+        emitting: false
+      });
+      emitter.explode(32); //adds particle explosion
       boom.on('animationcomplete', () => {   // callback after anim completes
         ship.reset()                         // reset ship position
         ship.alpha = 1                       // make ship visible again
