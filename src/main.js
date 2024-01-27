@@ -3,6 +3,9 @@ let config = { //object type
     type: Phaser.AUTO, //type tells phaser what graphic context to use to render the game 
     width: 640, //game window width
     height: 480, //game window height
+    render: {
+      pixelArt: true
+    },
     scene: [Menu,Play]
   }
 
@@ -14,3 +17,4 @@ let borderPadding = borderUISize / 3
 
 // reserve keyboard bindings
 let keyFIRE, keyRESET, keyLEFT, keyRIGHT
+let highscore = 0
