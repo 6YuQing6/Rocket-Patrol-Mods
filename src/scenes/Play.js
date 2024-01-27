@@ -11,7 +11,13 @@ class Play extends Phaser.Scene {
       this.moon = this.add.tileSprite(0, 0, 640, 480, 'moon').setOrigin(0, 0);
 
       //background music
-      this.bkgMusic = this.sound.add('bkg-music', {volume: 0.1, loop: true});
+      /*
+      Heart Of The Ocean by Purrple Cat | https://purrplecat.com/
+      Music promoted by https://www.chosic.com/free-music/all/
+      Creative Commons CC BY-SA 3.0
+      https://creativecommons.org/licenses/by-sa/3.0/
+      */
+      this.bkgMusic = this.sound.add('bkg-music', {volume: 0.5, loop: true});
       this.bkgMusic.play();
 
       // green UI background
